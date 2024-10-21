@@ -62,3 +62,16 @@ function draw(e) {
 
     ctx.stroke();
 }
+// Task 4: Add Color Selection and Canvas Clearing
+
+// Event listener for color selection
+const colorPicker = document.getElementById('colorPicker');
+colorPicker.addEventListener('input', (e) => {
+    selectedColor = e.target.value;
+});
+
+// Clear canvas event listener
+const clearButton = document.getElementById('clearCanvas');
+clearButton.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
